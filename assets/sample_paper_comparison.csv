@@ -1,0 +1,7 @@
+model,type,reference_glyphs,dataset_scale,main_condition,ssim,lpips,fid,note
+pix2pix,cGAN image-to-image baseline,paired input-output,task-dependent,input image,,, ,general image-to-image baseline
+CKFont,GAN Hangul component-aware,28,Korean glyph generation,initial/medial/final components,0.8562,,71.52,reported prior-work value
+DM-Font,GAN dual memory,28~30,Korean handwriting fonts,component-wise persistent/dynamic memory,MS-SSIM 0.455,,style mFID 40.5,metrics not identical to ours
+Diff-Font Korean,Diffusion one-shot font generation,1,201 Korean fonts 2350 chars,content/style/component condition,0.812,0.072,10.69,closest diffusion prior work
+DK-Font,Diffusion handwriting pipeline,few-shot,OCR/scanned handwriting,character/stroke/style,0.81,0.17,50.93,harder real-handwriting setting
+Ours,Conditional DDPM,10,16 fonts 4096 glyph images,content glyph + reference glyphs,,, ,run notebook to regenerate exact metrics
